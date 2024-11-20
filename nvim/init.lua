@@ -1,0 +1,5 @@
+require("options")
+require("keymaps")
+require("statusline")
+require("plugin-manager")
+require("arara-theme")
