@@ -34,4 +34,8 @@ require("lazy").setup({
                 "folke/trouble.nvim",
                 config = require("plugins.trouble")
         },
+        { -- Oil
+                "stevearc/oil.nvim",
+                config = require("plugins.oil")
+        }
 })
