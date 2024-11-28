@@ -20,7 +20,6 @@ GIT_COL="1;33" ## Yellow
 SEP_COL="2;37" ## Gray
 
 ## Env variables
-export PATH="$PATH:/opt/ffmpeg/bin:/opt/neovim/bin:/opt/clangd/bin"
 export GIT_EDITOR="nvim"
 export EDITOR="nvim"
 export VISUAL="nvim"
