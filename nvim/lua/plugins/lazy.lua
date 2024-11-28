@@ -16,19 +16,22 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-        {
+        { -- LSP
+                "neovim/nvim-lspconfig",
+                config = require("plugins.lsp-config")
+        },
+        { -- Tree-sitter
                 "nvim-treesitter/nvim-treesitter",
                 config = require("plugins.treesitter")
         },
-        {
-                "neovim/nvim-lspconfig",
-                config = require("plugins.lspconfig")
-        },
-        {
+        { -- Telescope
                 "nvim-telescope/telescope.nvim",
                 tag = "0.1.8",
                 dependencies = {"nvim-lua/plenary.nvim"},
                 config = require("plugins.telescope")
         },
-        {"tpope/vim-fugitive"},
+        { -- Trouble
+                "folke/trouble.nvim",
+                config = require("plugins.trouble")
+        },
 })

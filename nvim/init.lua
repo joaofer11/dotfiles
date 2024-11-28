@@ -1,5 +1,5 @@
 require("options")
 require("keymaps")
 require("statusline")
-require("plugin-manager")
+require("plugins.lazy")
 require("arara-theme")
