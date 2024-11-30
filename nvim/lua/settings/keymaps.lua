@@ -23,7 +23,7 @@ vim.keymap.set("n", "<A-l>", ":vertical resize -2<CR>", {silent = true});
 
 -- Paste without yanking to register ring.
 -- Useful when pasting at a selected region.
-vim.keymap.set("n", "<leader>p", "\"_", {silent = true});
+vim.keymap.set("x", "<leader>p", [["_dP]], {silent = true})
 vim.keymap.set("n", "<leader>e", vim.cmd.Explore, {silent = true});
 vim.keymap.set("n", "<leader>l", vim.cmd.nohlsearch, {silent = true})
 
