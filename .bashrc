@@ -15,8 +15,6 @@ function path() {
     echo "$PATH" | tr ':' '\n'
 }
 
-DIR_COL="0;36" ## Blue
-GIT_COL="1;33" ## Yellow
 SEP_COL="2;37" ## Gray
 
 ## Env variables
