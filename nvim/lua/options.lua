@@ -1,6 +1,5 @@
--- See `:help options`
+-- :help options
 
--- Netrw settings
 vim.g.netrw_banner = 0;
 vim.g.netrw_preview = 1;
 vim.g.netrw_liststyle = 3;
@@ -14,7 +13,7 @@ vim.opt.laststatus = 3;
 
 vim.opt.number = true;
 vim.opt.relativenumber = true;
-vim.opt.wrap = false;
+vim.opt.wrap = true;
 
 vim.opt.termguicolors = true;
 
@@ -34,14 +33,14 @@ vim.opt.incsearch = true;
 vim.opt.ignorecase = true;
 
 -- Display current mode?
-vim.opt.showmode = false;
+vim.opt.showmode = true;
 
 -- Allow mouse for all modes.
 vim.opt.mouse = "a";
 
 -- Use spaces for indenting?
-vim.opt.expandtab = true;
--- Num of space chars a tab is equivalent.
+vim.opt.expandtab = false;
+-- Number of space characters per tab.
 vim.opt.tabstop = 8;
 -- Num of space chars to be inserted.
 vim.opt.shiftwidth = 8;
@@ -72,10 +71,10 @@ vim.opt.writebackup = true;
 vim.opt.cursorline = true;
 
 -- Draw delimiter at the given column ranges.
-vim.opt.colorcolumn = {"72", "80"};
+vim.opt.colorcolumn = {"72", "80", "120"};
 
 -- Draw signs at columns when available.
 vim.opt.signcolumn = "yes"; -- (yes = always)
 
 vim.opt.scrolloff = 999;
-vim.opt.sidescrolloff = 4;
+vim.opt.sidescrolloff = 0;

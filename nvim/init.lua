@@ -1,16 +1,12 @@
 local generic_group = vim.api.nvim_create_augroup("generic_group", {})
 
-require("settings.options")
-require("settings.keymaps")
-require("settings.statusline")
-require("settings.lazy")
+require("options")
+require("keymaps")
+require("plugin-manager")
 
--- Stolen from the primeagen.
---
--- This trim the spaces at end of each line,
--- before the buffer is saved.
+-- Trim spaces at the end of each line before saving the buffer.
 vim.api.nvim_create_autocmd("BufWritePre", {
-        group = generic_group,
-        pattern = "*",
-        command = [[%s/\s\+$//e]]
+	group = generic_group,
+	pattern = "*",
+	command = [[%s/\s\+$//e]]
 })
