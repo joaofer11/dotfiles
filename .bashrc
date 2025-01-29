@@ -8,14 +8,16 @@ alias grs="gr --staged"
 alias gl="git log --oneline --graph"
 alias glv="git log"
 
-## Aliases
-alias bcon="nvim ~/.bashrc && source ~/.bashrc"
+alias bcon="nv ~/.bashrc && source ~/.bashrc"
 alias ncon="cd ~/.config/nvim && nvim . && cd -"
-alias ls="ls --color"
+alias nv="nvim"
+alias ls="ls --color=always --group-directories-first"
 alias la="ls -a"
-alias ll="ls -a -l -h --group-directories-first"
+alias ll="la -laG"
+alias t="tree"
 alias grep="grep --color=always"
 alias ascii="man ascii | head --lines -49 | tail --line +15"
+alias path="echo $PATH | tr ':' '\n'"
 
 ## Functions
 function path() {
