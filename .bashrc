@@ -1,6 +1,3 @@
-## Scripts
-## This loads current git branch to display on prompt
-source ~/.dotfiles/shell/git-prompt.sh
 alias gs="git status -s"
 alias ga="git add"
 alias gap="git add --patch"
