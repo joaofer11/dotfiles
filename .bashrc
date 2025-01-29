@@ -1,6 +1,15 @@
 ## Scripts
 ## This loads current git branch to display on prompt
 source ~/.dotfiles/shell/git-prompt.sh
+alias gs="git status -s"
+alias ga="git add"
+alias gap="git add --patch"
+alias gd="git diff --word-diff=color"
+alias gds="gd --staged"
+alias gr="git restore"
+alias grs="gr --staged"
+alias gl="git log --oneline --graph"
+alias glv="git log"
 
 ## Aliases
 alias bcon="nvim ~/.bashrc && source ~/.bashrc"
