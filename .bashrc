@@ -27,17 +27,15 @@ function path() {
 GIT_COL="1;33" ## Yellow
 SEP_COL="2;37" ## Gray
 
-## Env variables
+export MANPAGER="nvim +Man!"
 export GIT_EDITOR="nvim"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export PS1="\[\033["$DIR_COL"m\]\W\[\033[00m\]\[\033["$GIT_COL"m\]\$(__git_ps1)\[\033[00m\] \[\033["$SEP_COL"m\]\$\[\033[00m\] "
 
-export PATH="$HOME/prog/bin:$PATH"
-export LD_LIBRARY_PATH="$HOME/prog/lib:$LD_LIBRARY_PATH"
+export PATH="$HOME/opt/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/opt/lib:$LD_LIBRARY_PATH"
 
-## Miscellaneous
-## NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
