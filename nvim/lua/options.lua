@@ -48,6 +48,7 @@ vim.opt.shiftwidth = 8;
 vim.opt.smartcase = true;
 vim.opt.smartindent = true;
 vim.opt.autoindent = true;
+vim.opt.copyindent = true;
 
 vim.opt.splitbelow = true;
 vim.opt.splitright = true;
