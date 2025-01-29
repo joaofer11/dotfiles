@@ -1,8 +1,7 @@
 return {
 	"stevearc/oil.nvim",
-	opts = {},
-	config = function(_, opts)
-		require("oil").setup(opts)
+	config = function()
+		require("oil").setup({})
 		vim.keymap.set("n", "<leader>e", vim.cmd.Oil)
 	end
 }
