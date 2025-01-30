@@ -20,8 +20,8 @@ vim.keymap.set("n", "<A-H>", ":vertical resize +4<CR>")
 vim.keymap.set("n", "<A-L>", ":vertical resize -4<CR>")
 
 -- Paste without yanking. Useful when pasting at a selected region.
+vim.keymap.set("n", "-", vim.cmd.Explore)
 vim.keymap.set("x", "<leader>p", [["_dP]])
-vim.keymap.set("n", "<leader>e", vim.cmd.Explore)
 vim.keymap.set("n", "<leader>l", vim.cmd.nohlsearch)
 
 vim.keymap.set("n", "<leader>bh", ":bprevious<CR>")
