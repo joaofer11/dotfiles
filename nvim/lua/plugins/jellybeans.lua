@@ -1,7 +1,7 @@
 return {
-	"metalelf0/jellybeans-nvim",
-	dependencies = {"rktjmp/lush.nvim"},
-	config = function()
+	"rktjmp/lush.nvim",
+	dependencies = "metalelf0/jellybeans-nvim",
+	init = function()
 		vim.cmd.colorscheme("jellybeans-nvim")
 	end
 }

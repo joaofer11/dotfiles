@@ -1,40 +1,42 @@
-alias gs="git status -s"
-alias ga="git add"
-alias gap="git add --patch"
-alias gd="git diff --word-diff=color"
+alias g="git"
+alias gs="g status -s"
+alias ga="g add"
+alias gap="g add --patch"
+alias gc="g commit"
+alias gd="g diff --word-diff=color"
 alias gds="gd --staged"
-alias gr="git restore"
+alias gr="g restore"
 alias grs="gr --staged"
-alias gl="git log --oneline --graph"
-alias glv="git log"
-
-alias bcon="nv ~/.bashrc && source ~/.bashrc"
-alias ncon="cd ~/.config/nvim && nvim . && cd -"
-alias nv="nvim"
-alias ls="ls --color=always --group-directories-first"
-alias la="ls -a"
-alias ll="la -laG"
-alias t="tree"
-alias grep="grep --color=always"
-alias ascii="man ascii | head --lines -49 | tail --line +15"
-alias path="echo $PATH | tr ':' '\n'"
-
-## Functions
-function path() {
-    echo "$PATH" | tr ':' '\n'
-}
+alias gl="g log --oneline --graph"
+alias glv="g log"
 
 GIT_COL="1;33" ## Yellow
 SEP_COL="2;37" ## Gray
 
-export MANPAGER="nvim +Man!"
+export MANPAGER="/bin/sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 export GIT_EDITOR="nvim"
 export EDITOR="nvim"
 export VISUAL="nvim"
 export PS1="\[\033["$DIR_COL"m\]\W\[\033[00m\]\[\033["$GIT_COL"m\]\$(__git_ps1)\[\033[00m\] \[\033["$SEP_COL"m\]\$\[\033[00m\] "
-
 export PATH="$HOME/opt/bin:$PATH"
 export LD_LIBRARY_PATH="$HOME/opt/lib:$LD_LIBRARY_PATH"
+
+alias so="source ~/.bashrc"
+alias bc="vim ~/.bashrc && so"
+alias nc="cd ~/.config/nvim && nvim . && cd -"
+alias v="vim"
+alias ls="ls --color=always --group-directories-first"
+alias la="ls -a"
+alias ll="la -laG"
+alias ascii="man ascii | head --lines -49 | tail --line +15"
+
+if [ -z "$(which fzf)" ]; then
+	eval "$(fzf --bash)"
+fi
+
+function vf() {
+	find $@ -type f | fzf --multi --bind "enter:become(vim {+})"
+}
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

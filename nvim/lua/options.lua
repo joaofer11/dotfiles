@@ -41,9 +41,9 @@ vim.opt.mouse = "a";
 -- Use spaces for indenting?
 vim.opt.expandtab = false;
 -- Number of space characters per tab.
-vim.opt.tabstop = 8;
+vim.opt.tabstop = 4;
 -- Num of space chars to be inserted.
-vim.opt.shiftwidth = 8;
+vim.opt.shiftwidth = 4;
 
 vim.opt.smartcase = true;
 vim.opt.smartindent = true;

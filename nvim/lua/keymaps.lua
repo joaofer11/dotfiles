@@ -6,9 +6,6 @@ vim.keymap.set({"i", "v", "x"}, "FJ", "<ESC>")
 vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
 
--- This is a nice keymap for shitty keyboards
-vim.keymap.set("i", "<C-d>", "<Del>")
-
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
