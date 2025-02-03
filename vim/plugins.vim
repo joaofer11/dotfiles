@@ -9,6 +9,9 @@ call plug#begin()
 	Plug 'haya14busa/incsearch.vim'
 call plug#end()
 
+" Allow easymotion to ignore case
+let g:EasyMotion_smartcase = 1
+
 map s  <Plug>(easymotion-s2)
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
