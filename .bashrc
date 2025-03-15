@@ -1,14 +1,31 @@
 alias g="git"
-alias gs="g status -s"
-alias ga="g add"
-alias gap="g add --patch"
-alias gc="g commit"
+alias gi="g init"
+alias gs="g status --short"
+alias gS="g status"
+
 alias gd="g diff --word-diff=color"
 alias gds="gd --staged"
+
+alias ga="g add"
+alias gae="g add --edit"
+alias gc="g commit"
+
 alias gr="g restore"
-alias grs="gr --staged"
-alias gl="g log --oneline --graph"
-alias glv="g log"
+alias gu="g restore --staged"
+
+alias gl="g log --oneline"
+alias glg="g log --oneline --graph"
+alias gla="g log --oneline --all"
+alias glag="g log --oneline --all --graph"
+
+alias gL="g log"
+alias gLg="g log --graph"
+alias gLa="g log --all"
+alias gLag="g log --all --graph"
+
+alias gb="g branch"
+alias gbm="g branch --move"
+alias gco="g checkout"
 
 GIT_COL="1;33" ## Yellow
 SEP_COL="2;37" ## Gray
