@@ -16,14 +16,14 @@ return {
 			-- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
 			auto_install = true,
 
-			highlight = {enable = true},
+			highlight = { enable = true },
 
 			incremental_selection = {
 				enable = true,
 				keymaps = {
-					node_incremental = "v",
-					node_decremental = "V",
-					scope_incremental = "<leader>s"
+					node_incremental = "x",
+					node_decremental = "X",
+					scope_incremental = "<leader>x"
 				}
 			},
 		})
