@@ -1,5 +1,4 @@
 " Options
-syntax on
 set nonumber
 set norelativenumber
 set wrap
@@ -59,3 +58,20 @@ nnoremap <C-l> 2<C-w>>
 " Before saving the buf, remove any trailing whitespace for each line in buf
 autocmd BufWritePre * %s/\s\+$//e
 
+" Plugins
+call plug#begin('~/dotfiles/.vim/plugged')
+    Plug 'tpope/vim-unimpaired'
+    Plug 'justinmk/vim-sneak'
+    Plug 'altercation/vim-colors-solarized'
+
+    let g:sneak#label=1
+    let g:sneak#use_ic_scs=1
+    map s <Plug>Sneak_s
+    map S <Plug>Sneak_S
+    map f <Plug>Sneak_f
+    map F <Plug>Sneak_F
+call plug#end()
+
+syntax enable
+set background=dark
+colorscheme solarized

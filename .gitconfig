@@ -24,7 +24,6 @@
 	aa = add --all
 	ae = add --edit
 	u  = restore --staged
-	r  = restore
 
 	# Commit
 	c   = commit

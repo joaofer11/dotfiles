@@ -1,3 +1,4 @@
 .vim/.undo/*
 !.vim/.undo/ignore-this-file
 .vim/.netrwhist
+.vim/plugged
