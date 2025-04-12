@@ -1,0 +1,28 @@
+[user]
+	email = joaofergear003@gmail.com
+	name = João Fernandes
+[init]
+	defaultBranch = main
+[alias]
+	# Log current branch
+	l  = log --graph
+	lo = log --graph --oneline
+
+	# Status
+	s  = status
+	ss = status --short
+
+	# Diff
+	d  = diff
+	dc = diff --cached
+
+	# Add
+	a  = add
+	aa = add --all
+	ae = add --edit
+	u  = reset HEAD --
+
+	# Commit
+	c   = commit
+	can = commit --amend --no-edit
+
