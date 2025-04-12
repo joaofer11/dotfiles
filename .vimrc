@@ -61,6 +61,7 @@ autocmd BufWritePre * %s/\s\+$//e
 " Plugins
 call plug#begin('~/dotfiles/.vim/plugged')
     Plug 'tpope/vim-unimpaired'
+    Plug 'tpope/vim-vinegar'
     Plug 'justinmk/vim-sneak'
     Plug 'altercation/vim-colors-solarized'
 
