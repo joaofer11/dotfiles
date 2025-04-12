@@ -1,31 +1,32 @@
 [user]
-	email = joaofergear003@gmail.com
-	name = João Fernandes
+    email = joaofergear003@gmail.com
+    name = João Fernandes
 [core]
-	editor = vim
+    editor = vim
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [alias]
-	# Log current branch
-	l  = log --graph
-	lo = log --graph --oneline
+    # Log current branch
+    l  = log --graph
+    lo = log --graph --oneline
 
-	# Status
-	s   = status
-	ss  = status --short
-	ssu = status --short --untracked-files
+    # Status
+    s   = status
+    ss  = status --short
+    ssu = status --short --untracked-files
 
-	# Diff
-	d  = diff
-	ds = diff --staged
+    # Diff
+    d  = diff
+    ds = diff --staged
 
-	# Index
-	a  = add
-	aa = add --all
-	ae = add --edit
-	u  = restore --staged
+    # Index
+    a  = add
+    aa = add --all
+    ap = add --patch
+    ae = add --edit
+    u  = restore --staged
 
-	# Commit
-	c   = commit
-	cm  = commit -m
-	can = commit --amend --no-edit
+    # Commit
+    c   = commit
+    cm  = commit -m
+    can = commit --amend --no-edit
