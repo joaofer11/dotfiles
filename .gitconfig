@@ -1,6 +1,8 @@
 [user]
 	email = joaofergear003@gmail.com
 	name = João Fernandes
+[core]
+	editor = vim
 [init]
 	defaultBranch = main
 [alias]
@@ -9,20 +11,22 @@
 	lo = log --graph --oneline
 
 	# Status
-	s  = status
-	ss = status --short
+	s   = status
+	ss  = status --short
+	ssu = status --short --untracked-files
 
 	# Diff
 	d  = diff
-	dc = diff --cached
+	ds = diff --staged
 
-	# Add
+	# Index
 	a  = add
 	aa = add --all
 	ae = add --edit
-	u  = reset HEAD --
+	u  = restore --staged
+	r  = restore
 
 	# Commit
 	c   = commit
+	cm  = commit -m
 	can = commit --amend --no-edit
-
