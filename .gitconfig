@@ -3,6 +3,7 @@
     name = João Fernandes
 [core]
     editor = vim
+    autocrlf = true
 [init]
     defaultBranch = main
 [alias]
