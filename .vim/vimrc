@@ -1,0 +1,105 @@
+" Options
+set nonumber
+set norelativenumber
+set wrap
+set textwidth=80
+set incsearch
+set nohlsearch
+set ignorecase
+set smartcase
+set scrolljump=-50
+set clipboard=unnamed
+set mouse=a
+set guicursor=""
+set fileencoding="utf-8"
+set formatoptions=tcqrow
+set wildmenu
+set showcmd
+set backspace=2
+set laststatus=2
+set hidden
+
+" Indent
+set noexpandtab
+set tabstop=8
+set softtabstop=0
+set shiftwidth=0
+
+set nobackup
+set noswapfile
+set undofile
+set undodir^=~/dotfiles/.vim/.undo//
+
+" I''ll only be using this if I'm on Windows
+if has("gui_running")
+	set guioptions-=m "Hides the menubar
+	set guioptions-=T "Hides the toolbar
+	set guioptions-=l "hides the scrollbar
+	set guioptions-=L "hides the scrollbar
+	set guioptions-=r "hides the scrollbar
+	set guioptions-=i "Hides the vim icon
+	set guifont=Inconsolata\ Regular:h18
+
+	source $HOME\dotfiles\.vim\opt\zoom.vim
+	if mapcheck('-') != ''
+		unmap -
+	endif
+	if mapcheck('+') != ''
+		unmap +
+	endif
+	map <C-=> <cmd>ZoomIn<cr>
+	map <C-_> <cmd>ZoomOut<cr>
+	map <C-0> <cmd>ZoomReset<cr>
+
+	" As coisas que temos que fazer para essa merda funcionar...
+endif
+
+" Keymaps
+let mapleader=" "
+let maplocalleader=" "
+noremap <F2> <cmd>source $HOME/dotfiles/.vim/vimrc<cr>
+
+nnoremap <leader>w :w<cr>
+nnoremap <leader>q :q<cr>
+nnoremap <leader>e :bd<cr>
+nnoremap <leader>b :ls<cr>:b
+xnoremap <leader>p "_dP
+
+inoremap fj <ESC>
+inoremap FJ <ESC>
+cnoremap fj <ESC>
+cnoremap FJ <ESC>
+xnoremap fj <ESC>
+xnoremap FJ <ESC>
+
+" Stay in visual mode after indenting
+xnoremap > :s/^/\t/<cr>gv
+xnoremap < :s/^\t\?//<cr>gv
+
+" Easy window resize
+nnoremap <C-k> 2<C-w>+
+nnoremap <C-j> 2<C-w>-
+nnoremap <C-h> 2<C-w><
+nnoremap <C-l> 2<C-w>>
+
+" Before saving the buf, remove any trailing whitespace for each line in buf
+autocmd BufWritePre * %s/\s\+$//e
+
+" Plugins
+call plug#begin('~/dotfiles/.vim/plugged')
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-vinegar'
+Plug 'justinmk/vim-sneak'
+Plug 'altercation/vim-colors-solarized'
+
+let g:sneak#label=1
+let g:sneak#use_ic_scs=1
+map s <Plug>Sneak_s
+map S <Plug>Sneak_S
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
+call plug#end()
+
+" syntax enable
+set background=dark
+colorscheme solarized
