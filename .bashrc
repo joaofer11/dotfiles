@@ -10,4 +10,4 @@ GREEN="\[\e[32m\]"
 ORANGE="\[\e[33m\]"
 RESET="\[\e[39m\]"
 
-PS1="${CYAN}\w${RESET}${ORANGE}\$(__git_ps1)${RESET}\n${GREEN}\$${RESET} "
+PS1="${CYAN}\w${RESET}\n${GREEN}\$${RESET} "
