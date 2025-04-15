@@ -1,6 +1,11 @@
+syntax on
+set background=dark
+colorscheme solarized
+
 " Options
 set nonumber
 set norelativenumber
+set cursorline
 set wrap
 set textwidth=80
 set incsearch
@@ -8,6 +13,7 @@ set nohlsearch
 set ignorecase
 set smartcase
 set scrolljump=-50
+" set scrolloff=4
 set clipboard=unnamed
 set mouse=a
 set guicursor=""
@@ -18,19 +24,22 @@ set showcmd
 set backspace=2
 set laststatus=2
 set hidden
+set ruler
 
 " Indent
 set noexpandtab
-set tabstop=8
 set softtabstop=0
-set shiftwidth=0
+set shiftwidth=8
+set tabstop=8
+set cindent
+set cinoptions=(0,u0,U0
 
 set nobackup
 set noswapfile
 set undofile
 set undodir^=~/dotfiles/.vim/.undo//
 
-" I''ll only be using this if I'm on Windows
+" I'll only be using this if I'm on Windows
 if has("gui_running")
 	set guioptions-=m "Hides the menubar
 	set guioptions-=T "Hides the toolbar
@@ -38,7 +47,7 @@ if has("gui_running")
 	set guioptions-=L "hides the scrollbar
 	set guioptions-=r "hides the scrollbar
 	set guioptions-=i "Hides the vim icon
-	set guifont=Inconsolata\ Regular:h18
+	set guifont=Source\ Code\ Pro\ Regular:h16
 
 	source $HOME\dotfiles\.vim\opt\zoom.vim
 	if mapcheck('-') != ''
@@ -50,8 +59,6 @@ if has("gui_running")
 	map <C-=> <cmd>ZoomIn<cr>
 	map <C-_> <cmd>ZoomOut<cr>
 	map <C-0> <cmd>ZoomReset<cr>
-
-	" As coisas que temos que fazer para essa merda funcionar...
 endif
 
 " Keymaps
@@ -73,8 +80,8 @@ xnoremap fj <ESC>
 xnoremap FJ <ESC>
 
 " Stay in visual mode after indenting
-xnoremap > :s/^/\t/<cr>gv
-xnoremap < :s/^\t\?//<cr>gv
+xnoremap > >gv
+xnoremap < <gv
 
 " Easy window resize
 nnoremap <C-k> 2<C-w>+
@@ -85,21 +92,10 @@ nnoremap <C-l> 2<C-w>>
 " Before saving the buf, remove any trailing whitespace for each line in buf
 autocmd BufWritePre * %s/\s\+$//e
 
-" Plugins
-call plug#begin('~/dotfiles/.vim/plugged')
-Plug 'tpope/vim-unimpaired'
-Plug 'tpope/vim-vinegar'
-Plug 'justinmk/vim-sneak'
-Plug 'altercation/vim-colors-solarized'
+let g:sneak#label = 1
+let g:sneak#use_ic_scs = 1
 
-let g:sneak#label=1
-let g:sneak#use_ic_scs=1
 map s <Plug>Sneak_s
 map S <Plug>Sneak_S
 map f <Plug>Sneak_f
 map F <Plug>Sneak_F
-call plug#end()
-
-" syntax enable
-set background=dark
-colorscheme solarized

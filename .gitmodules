@@ -1,0 +1,15 @@
+[submodule ".vim/pack/colors/start/solarized"]
+	path = .vim/pack/colors/start/solarized
+	url = https://github.com/altercation/vim-colors-solarized
+[submodule ".vim/pack/plugins/sneak"]
+	path = .vim/pack/plugins/start/sneak
+	url = https://github.com/justinmk/vim-sneak
+[submodule ".vim/pack/plugins/vinegar"]
+	path = .vim/pack/plugins/start/vinegar
+	url = https://github.com/tpope/vim-vinegar
+[submodule ".vim/pack/plugins/unimpaired"]
+	path = .vim/pack/plugins/start/unimpaired
+	url = https://github.com/tpope/vim-unimpaired
+[submodule ".vim/pack/plugins/smarttabs"]
+	path = .vim/pack/plugins/start/smarttabs
+	url = https://github.com/dpc/vim-smarttabs
