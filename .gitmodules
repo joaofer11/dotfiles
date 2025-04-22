@@ -13,3 +13,6 @@
 [submodule ".vim/pack/plugins/smarttabs"]
 	path = .vim/pack/plugins/start/smarttabs
 	url = https://github.com/dpc/vim-smarttabs
+[submodule ".vim/pack/plugins/start/fzf"]
+	path = .vim/pack/plugins/start/fzf
+	url = https://github.com/junegunn/fzf.vim

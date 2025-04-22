@@ -2,12 +2,15 @@ syntax on
 set background=dark
 colorscheme solarized
 
+" Before saving the buf, remove any trailing whitespace for each line
+autocmd BufWritePre * %s/\s\+$//e
+
 " Options
 set nonumber
 set norelativenumber
 set cursorline
 set wrap
-set textwidth=80
+set textwidth=0
 set incsearch
 set nohlsearch
 set ignorecase
@@ -22,7 +25,7 @@ set formatoptions=tcqrow
 set wildmenu
 set showcmd
 set backspace=2
-set laststatus=2
+set laststatus=0
 set hidden
 set ruler
 
@@ -56,20 +59,19 @@ if has("gui_running")
 	if mapcheck('+') != ''
 		unmap +
 	endif
-	map <C-=> <cmd>ZoomIn<cr>
-	map <C-_> <cmd>ZoomOut<cr>
-	map <C-0> <cmd>ZoomReset<cr>
+	map <C-=> <cmd>ZoomIn<CR>
+	map <C-_> <cmd>ZoomOut<CR>
+	map <C-0> <cmd>ZoomReset<CR>
 endif
 
 " Keymaps
 let mapleader=" "
 let maplocalleader=" "
-noremap <F2> <cmd>source $HOME/dotfiles/.vim/vimrc<cr>
+noremap <F2> <cmd>source $HOME/dotfiles/.vim/vimrc<CR>
 
-nnoremap <leader>w :w<cr>
-nnoremap <leader>q :q<cr>
-nnoremap <leader>e :bd<cr>
-nnoremap <leader>b :ls<cr>:b
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>e :bd<CR>
 xnoremap <leader>p "_dP
 
 inoremap fj <ESC>
@@ -89,13 +91,18 @@ nnoremap <C-j> 2<C-w>-
 nnoremap <C-h> 2<C-w><
 nnoremap <C-l> 2<C-w>>
 
-" Before saving the buf, remove any trailing whitespace for each line in buf
-autocmd BufWritePre * %s/\s\+$//e
-
+# Sneak
 let g:sneak#label = 1
 let g:sneak#use_ic_scs = 1
-
 map s <Plug>Sneak_s
 map S <Plug>Sneak_S
 map f <Plug>Sneak_f
 map F <Plug>Sneak_F
+
+" FZF
+set rtp+=/opt/fzf
+let g:fzf_vim = {} " Initialize configuration dictionary
+let g:fzf_layout = { "window": { "width": 0.9, "height": 0.9 } }
+let g:fzf_vim.preview_window = [] " Disable preview
+map <leader>f :Files<CR>
+map <leader>b :Buffers<CR>
